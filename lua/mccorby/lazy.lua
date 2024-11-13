@@ -45,12 +45,13 @@ require('lazy').setup({
     -- config = function()
     --   vim.cmd.colorscheme("gruvbox")
     -- end
+    --
     'dracula/vim',
     as = 'dracula',
     config = function()
       vim.cmd.colorscheme('dracula');
     end
-
+    --
   },
 
   {
