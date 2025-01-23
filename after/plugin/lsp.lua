@@ -42,11 +42,12 @@ local on_attach = function(_, bufnr)
 end
 
 local servers = {
-  -- gopls = {},
+  gopls = {},
   -- rust_analyzer = {},
-  -- elixirls = {},
-
-
+  prismals = {},
+  tsserver = {
+  },
+  elixirls = {},
   lua_ls = {
     Lua = {
       workspace = { checkThirdParty = false },
@@ -68,25 +69,8 @@ local servers = {
       },
     },
   },
-
-  jsonls = {},
-  tailwindcss = {
-    tailwindCSS = {
-      validate = true,
-    },
-  },
-  dockerls = {},
-  docker_compose_language_service = {
-  },
-  yamlls = {
-    -- setup for docker-compose
-    yaml = {
-      schemas = {
-        ['docker-compose*'] = { 'docker-compose.yml' },
-      },
-    },
-  },
-
+  jdtls = {},
+  jsonls = {}
 }
 
 -- Setup neovim lua configuration
@@ -113,12 +97,6 @@ mason_lspconfig.setup_handlers {
   end,
 }
 
--- config for install clang fast
-require('lspconfig').clangd.setup {
-  capabilities = capabilities,
-  on_attach = on_attach,
-  cmd = { 'clangd', '--background-index', '--clang-tidy', '--header-insertion=iwyu' },
-}
 
 -- nvim-cmp setup
 local cmp = require 'cmp'
