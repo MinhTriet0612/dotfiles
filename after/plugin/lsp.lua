@@ -45,23 +45,12 @@ local servers = {
   gopls = {},
   buf_ls = {},
   prismals = {},
-  lua_ls = {
-    Lua = {
-      workspace = { checkThirdParty = false },
-      telemetry = { enable = false },
-    },
-  },
-  -- clangd = {
-  -- },
+  clangd = {},
   jsonls = {},
-  tailwindcss = {
-    tailwindCSS = {
-      validate = true,
-    },
-  },
   dockerls = {},
-  docker_compose_language_service = {
-  },
+  docker_compose_language_service = {},
+  ts_ls = {},
+  docker_compose_language_service = {},
   yamlls = {
     -- setup for docker-compose
     yaml = {
@@ -70,15 +59,17 @@ local servers = {
       },
     },
   },
-
-  ts_ls = {
-
+  lua_ls = {
+    Lua = {
+      workspace = { checkThirdParty = false },
+      telemetry = { enable = false },
+    },
   },
-  cmake = {
-
+  tailwindcss = {
+    tailwindCSS = {
+      validate = true,
+    },
   },
-
-
 }
 
 -- Setup neovim lua configuration
@@ -105,12 +96,6 @@ mason_lspconfig.setup_handlers {
   end,
 }
 
--- config for install clang fast
-require('lspconfig').clangd.setup {
-  capabilities = capabilities,
-  on_attach = on_attach,
-  cmd = { 'clangd', '--background-index', '--clang-tidy', '--header-insertion=iwyu' },
-}
 
 -- nvim-cmp setup
 local cmp = require 'cmp'
