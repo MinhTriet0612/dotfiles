@@ -9,7 +9,6 @@ local on_attach = function(_, bufnr)
     if desc then
       desc = 'LSP: ' .. desc
     end
-
     vim.keymap.set('n', keys, func, { buffer = bufnr, desc = desc })
   end
 
@@ -42,33 +41,18 @@ local on_attach = function(_, bufnr)
 end
 
 local servers = {
-  -- gopls = {},
-  -- rust_analyzer = {},
-  -- elixirls = {},
-
-
+  cssls = {},
+  gopls = {},
+  buf_ls = {},
+  prismals = {},
   lua_ls = {
     Lua = {
       workspace = { checkThirdParty = false },
       telemetry = { enable = false },
     },
   },
-  clangd = {
-  },
-
-  jdtls = {},
-  pyright = {
-    python = {
-      formatting = {
-        provider = 'ruff',
-      },
-
-      analysis = {
-        diagnosticMode = 'workspace',
-      },
-    },
-  },
-
+  -- clangd = {
+  -- },
   jsonls = {},
   tailwindcss = {
     tailwindCSS = {
@@ -86,6 +70,14 @@ local servers = {
       },
     },
   },
+
+  ts_ls = {
+
+  },
+  cmake = {
+
+  },
+
 
 }
 

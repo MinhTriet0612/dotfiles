@@ -15,7 +15,6 @@ require('lazy').setup({
   -- Git related plugins
   'tpope/vim-fugitive',
   'tpope/vim-rhubarb',
-
   {
     -- LSP Configuration & Plugins
     'neovim/nvim-lspconfig',
@@ -107,11 +106,16 @@ require('lazy').setup({
   -- Icons
   'nvim-tree/nvim-web-devicons',
 
-  {
-    "wakatime/vim-wakatime", lazy = false
-  },
+  { "wakatime/vim-wakatime", lazy = false },
 
   -- auto pair
-  { "jiangmiao/auto-pairs" }
+  { "jiangmiao/auto-pairs" },
 
+  {
+    'chipsenkbeil/distant.nvim',
+    branch = 'v0.3',
+    config = function()
+      require('distant'):setup()
+    end
+  }
 })
