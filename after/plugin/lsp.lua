@@ -41,6 +41,7 @@ local on_attach = function(_, bufnr)
 end
 
 local servers = {
+  sqlls = {},
   cssls = {},
   gopls = {},
   buf_ls = {},
@@ -48,7 +49,6 @@ local servers = {
   clangd = {},
   jsonls = {},
   dockerls = {},
-  docker_compose_language_service = {},
   ts_ls = {},
   docker_compose_language_service = {},
   yamlls = {

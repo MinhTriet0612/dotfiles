@@ -16,5 +16,5 @@ vim.keymap.set("n", "<leader>mr", "<cmd>CellularAutomaton make_it_rain<CR>");
 vim.keymap.set("n", "<leader>gol", "<cmd>CellularAutomaton game_of_life<CR>");
 
 
--- map option key in in macos is meta key 
+-- map option key in in macos is meta key
 --
