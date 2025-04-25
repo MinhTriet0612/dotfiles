@@ -44,7 +44,6 @@ local servers = {
   sqlls = {},
   cssls = {},
   gopls = {},
-  buf_ls = {},
   prismals = {},
   clangd = {},
   jsonls = {},
