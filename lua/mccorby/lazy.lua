@@ -124,9 +124,13 @@ require('lazy').setup({
   { "wakatime/vim-wakatime", lazy = false },
 
   -- auto pair
-  { "jiangmiao/auto-pairs" },
-
-  { 'nvim-java/nvim-java' },
+  {
+    'windwp/nvim-autopairs',
+    event = "InsertEnter",
+    config = true
+    -- use opts = {} for passing setup options
+    -- this is equivalent to setup({}) function
+  },
 
   {
     "epwalsh/pomo.nvim",
