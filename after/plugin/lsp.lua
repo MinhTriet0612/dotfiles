@@ -41,6 +41,8 @@ local on_attach = function(_, bufnr)
 end
 
 local servers = {
+  -- python
+  pyright = {},
   sqlls = {},
   cssls = {},
   gopls = {},
