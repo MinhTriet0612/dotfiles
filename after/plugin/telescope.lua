@@ -13,10 +13,18 @@ require('telescope').setup {
         ['<C-d>'] = false,
       },
     },
+    -- Match path segments only (e.g. /log/), not substrings (e.g. "log" in "logger")
     file_ignore_patterns = {
-      'dist', 'build', 'target', 'out',
-      'node_modules', 'deps',
-      'tmp', 'cache', 'logs', 'log'
+      '/node_modules/',
+      '/dist/',
+      '/build/',
+      '/target/',
+      '/out/',
+      '/deps/',
+      '/tmp/',
+      '/cache/',
+      '/logs/',
+      '/log/',   -- directory named "log" only, not "logger" or "catalog"
     }
   },
 }

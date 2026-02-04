@@ -1,5 +1,5 @@
 require('nvim-treesitter.configs').setup {
-  ensure_installed = { "c", "lua", "rust", "javascript", "typescript", "elixir", "python", "tsx", "cpp", "json", "dockerfile", "make", "go", "proto", "sql", "prisma" },
+  ensure_installed = { "c", "lua", "rust", "javascript", "typescript", "elixir", "python", "tsx", "cpp", "json", "dockerfile", "make", "go", "proto", "sql", "prisma", "solidity" },
 
   sync_install = false,
 

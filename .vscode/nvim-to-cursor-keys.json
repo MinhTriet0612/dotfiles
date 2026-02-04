@@ -1,0 +1,47 @@
+{
+  "_note": "Leader = Ctrl+Space (chord: press Ctrl+Space then key). Plain Space types normally in search bar, terminal, and editor. Copy keybindings.json to Cursor User keybindings.",
+  "insert_mode": {
+    "ctrl+space": "Trigger Suggest (autocomplete) — only in Vim Insert mode"
+  },
+  "remap": {
+    "<leader><tab>": "ctrl+space tab (Explorer)",
+    "<leader>p": "ctrl+space p (Paste)",
+    "<leader>y": "ctrl+space y (Copy)",
+    "<leader>Y": "ctrl+space shift+y (Copy line)",
+    "<leader>f": "ctrl+space f (Format)"
+  },
+  "lsp": {
+    "<leader>rn": "ctrl+space r (Rename)",
+    "<leader>ca": "ctrl+space c (Code Action)",
+    "gd": "f12 (Go to Definition)",
+    "gr": "shift+f12 (References)",
+    "gI": "ctrl+shift+f12 (Implementation)",
+    "<leader>D": "ctrl+space shift+d (Type Definition)",
+    "<leader>ds": "ctrl+space d (Document Symbols)",
+    "<leader>ws": "ctrl+space w (Workspace Symbols)",
+    "K": "ctrl+space k (Hover)",
+    "<C-k>": "ctrl+shift+space (Signature Help)",
+    "gD": "ctrl+f12 (Declaration)"
+  },
+  "telescope": {
+    "<leader>?": "ctrl+space shift+/ (Recent files)",
+    "<leader><space>": "ctrl+space space (Buffers / Quick Open)",
+    "<leader>/": "ctrl+space / (Fuzzy current buffer)",
+    "<leader>gf": "ctrl+space g (Git/File search)",
+    "<leader>sf": "ctrl+space s (Find files)",
+    "<leader>sh": "ctrl+space h (Commands)",
+    "<leader>sw": "ctrl+space shift+f (Selection to find)",
+    "<leader>sg": "ctrl+space shift+g (Find in files)",
+    "<leader>sd": "ctrl+space shift+s (Diagnostics/Problems)"
+  },
+  "trouble": {
+    "<leader>xx": "ctrl+space x (Problems)",
+    "gR": "shift+f12 (LSP References)"
+  },
+  "zen": {
+    "<leader>zz": "ctrl+space z (Zen Mode)"
+  },
+  "other": {
+    "go back to editor": "ctrl+space escape"
+  }
+}

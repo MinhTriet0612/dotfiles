@@ -41,11 +41,14 @@ local on_attach = function(_, bufnr)
 end
 
 local servers = {
+  -- solidity
+  solidity_ls_nomicfoundation = {},
   -- python
   pyright = {},
+  -- sql
   sqlls = {},
   cssls = {},
-  gopls = {},
+  -- gopls = {},
   prismals = {},
   clangd = {},
   jsonls = {},
