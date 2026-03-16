@@ -1,0 +1,38 @@
+[general]
+import = [
+  "~/.config/alacritty/themes/dracula.toml" # Dracula theme
+]
+
+[window]
+opacity = 0.95
+
+[font]
+size = 12
+
+[font.normal]
+family = "JetBrainsMono Nerd Font"
+style = "Regular"
+
+[font.bold]
+family = "JetBrainsMono Nerd Font"
+style = "Bold"
+
+[font.italic]
+family = "JetBrainsMono Nerd Font"
+style = "Italic"
+
+# ---------- Scrolling ----------
+[scrolling]
+history = 10000
+multiplier = 3
+
+
+[keyboard]
+bindings = [
+  # New instance and fullscreen
+  { key = "N", mods = "Control|Super", action = "SpawnNewInstance" },
+  { key = "F", mods = "Control|Super", action = "ToggleFullscreen" },
+  # { key = "+", mods = "Control|Super", action = "IncreaseBackgroundOpacity" },
+  # { key = "-", mods = "Control|Super", action = "DecreaseBackgroundOpacity" },
+]
+
