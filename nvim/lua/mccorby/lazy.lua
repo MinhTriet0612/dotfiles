@@ -13,17 +13,25 @@ vim.opt.rtp:prepend(lazypath)
 
 require('lazy').setup({
   -- Git related plugins
-  'tpope/vim-fugitive',
-  'tpope/vim-rhubarb',
+  { 'tpope/vim-fugitive' },
+  { 'tpope/vim-rhubarb' },
   {
     -- LSP Configuration & Plugins
     'neovim/nvim-lspconfig',
     dependencies = {
-      { 'williamboman/mason.nvim', config = true },
-      'williamboman/mason-lspconfig.nvim',
-
-      'folke/neodev.nvim',
-      { 'j-hui/fidget.nvim',       opts = {} },
+      { 'williamboman/mason-lspconfig.nvim' },
+      { 'folke/neodev.nvim' },
+      { 'williamboman/mason.nvim',          config = true },
+      {
+        'j-hui/fidget.nvim',
+        opts = {
+          notification = {
+            window = {
+              winblend = 0,
+            },
+          },
+        }
+      },
     },
   },
 
@@ -131,29 +139,6 @@ require('lazy').setup({
     -- use opts = {} for passing setup options
     -- this is equivalent to setup({}) function
   },
-
-  {
-    "epwalsh/pomo.nvim",
-    dependencies = {
-      "rcarriga/nvim-notify"
-    },
-    config = function()
-      require("pomo").setup(
-        {
-          sessions = {
-            pomodoro = {
-              { name = "Work",        duration = "25m" },
-              { name = "Short Break", duration = "5m" },
-              { name = "Work",        duration = "25m" },
-              { name = "Short Break", duration = "5m" },
-              { name = "Work",        duration = "25m" },
-              { name = "Long Break",  duration = "15m" },
-            },
-          },
-        }
-      )
-    end
-  },
   {
     "coder/claudecode.nvim",
     dependencies = { "folke/snacks.nvim" },
@@ -177,13 +162,5 @@ require('lazy').setup({
       { "<leader>aa", "<cmd>ClaudeCodeDiffAccept<cr>", desc = "Accept diff" },
       { "<leader>ad", "<cmd>ClaudeCodeDiffDeny<cr>",   desc = "Deny diff" },
     },
-  },
-
-  {
-    'chipsenkbeil/distant.nvim',
-    branch = 'v0.3',
-    config = function()
-      require('distant'):setup()
-    end
   },
 })

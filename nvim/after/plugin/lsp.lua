@@ -19,6 +19,7 @@ local on_attach = function(_, bufnr)
   nmap('gr', require('telescope.builtin').lsp_references, '[G]oto [R]eferences')
   nmap('gI', vim.lsp.buf.implementation, '[G]oto [I]mplementation')
   nmap('<leader>D', vim.lsp.buf.type_definition, 'Type [D]efinition')
+  nmap('<leader>e', vim.diagnostic.open_float, 'Open [E]rror')
   nmap('<leader>ds', require('telescope.builtin').lsp_document_symbols, '[D]ocument [S]ymbols')
   nmap('<leader>ws', require('telescope.builtin').lsp_dynamic_workspace_symbols, '[W]orkspace [S]ymbols')
 
@@ -41,6 +42,8 @@ local on_attach = function(_, bufnr)
 end
 
 local servers = {
+  -- latext
+  texlab = {},
   -- solidity
   solidity_ls_nomicfoundation = {},
   -- python
@@ -48,7 +51,7 @@ local servers = {
   -- sql
   sqlls = {},
   cssls = {},
-  -- gopls = {},
+  gopls = {},
   prismals = {},
   clangd = {},
   jsonls = {},
